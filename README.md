@@ -10,15 +10,15 @@ The **EEV20.1** is an open-source mechanical ventilator designed to assist in th
 ---
 
 ## 📐 Interactive 3D Model
-
-Click the image below to open the **interactive 3D viewer**. You can rotate, zoom, and inspect the ventilator mechanism directly in your browser.
-
-[![Click to Interact](https://via.placeholder.com/800x400?text=Click+Here+to+View+Interactive+3D+Model)](Product_vision.glb)
-
-> **Note:** The master CAD source files are located in the `mechanics/` directory.
-
----
-
+<div align="center">
+  <h3>Mechanical Explosion View (Assembly Sequence)</h3>
+  <video src="product_vision.mp4" width="100%" muted autoplay loop playsinline>
+    Your browser does not support the video tag.
+  </video>
+  <p align="right">
+    <i>Click the video for playback controls or <a href="./Product_vision.glb">view the 3D model here</a>.</i>
+  </p>
+</div>
 ## 📂 Firmware Architecture
 
 The firmware is designed for safety and modularity using a Finite State Machine (FSM) architecture.
