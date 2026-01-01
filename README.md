@@ -60,21 +60,80 @@ The original 3D assets are available in **GLB format** inside the `docs/` direct
 
 ```text
 EEV20.1/
-├── docs/                                # 3D model assets and viewer files
-│   ├── Product_vision.glb
-│   ├── Prototype.glb
-│   └── eev20_1_model.gif
-├── Ventilation_Firmware_ATmega128A/     # Embedded firmware for ATmega128A
-│   ├── <firmware source files…>
-│   └── README.md                        # Firmware‑specific readme
-├── Hardware/                            # Hardware design files
-│   ├── <schematics / PCB files…>
-├── Documentation/                       # Manuals & project reports
-│   ├── <PDF / docs…>
-├── PCBs_Schematics.pdf                  # Board schematics PDF
-├── Pneumatic_circuit.jpg                # Pneumatic design image
-├── EEV 20 ventilator User manual.pdf     # Main user manual
-└── README.md                            # Main project readme
+├── .gitattributes                       # Git configuration for line endings, etc.
+├── LICENSE                              # MIT License file
+├── bill of materials.docx                # Complete parts list for the ventilator
+├── EEV 20 ventilator User manual.pdf    # Main user manual PDF
+├── Product_vision.gif                    # GIF preview of the 3D model
+├── Pneumatic_circuit.jpg                 # Pneumatic system diagram
+├── README.md                             # This file
+├── docs/                                 # 3D models & viewer assets
+│   ├── Body Design Containing Control Components.SLDPRT  # Solidworks CAD file of main enclosure & control
+│   ├── index.html                        # Web page for 3D model viewing
+│   ├── PCBs_Schematics.pdf               # PDF of PCB schematics
+│   ├── Product_vision.glb                # 3D model of final product (GLB format)
+│   ├── Product_vision.mp4                # Video render of the product
+│   ├── Prototype.glb                     # 3D model of prototype version
+│   └── Prototype.mp4                     # Video render of prototype
+├── Render Prev images/                    # Screenshots & renders of components
+│   ├── 2 Idle Valves.PNG
+│   ├── Blower.PNG
+│   ├── Design.PNG
+│   ├── Humidifier.PNG
+│   ├── keypad.PNG
+│   ├── LCD.PNG
+│   └── non return valve.PNG
+└── Ventilation_Firmware_ATmega128A/      # Embedded firmware for ATmega128A
+    ├── README.md                         # Firmware-specific README with build instructions
+    ├── main.c                            # Main program entry point
+    ├── app/                              # Application-level logic
+    │   ├── ventilation_fsm.c             # Finite State Machine implementation
+    │   └── ventilation_fsm.h             # FSM header
+    ├── config/                           # Configuration files
+    │   └── ventilation_config.h          # Configurable parameters for firmware
+    ├── control/                          # Control modules
+    │   ├── ventilation_idle_stepper_control.c  # Idle stepper motor control logic
+    │   └── ventilation_idle_stepper_control.h  # Header for stepper control
+    ├── drivers/                          # Low-level hardware drivers
+    │   ├── lcd_driver.c                  # LCD screen driver
+    │   ├── lcd_driver.h                  # LCD driver header
+    │   ├── stepper_driver.c              # Stepper motor driver
+    │   └── stepper_driver.h              # Stepper driver header
+    ├── logic/                             # Computational logic modules
+    │   ├── ventilation_machine_calculations.c   # Core ventilation calculations
+    │   └── ventilation_machine_calculations.h   # Header for calculations
+    ├── safety/                            # Safety and alarms
+    │   ├── ventilation_safety.c          # Safety functions (limits, alarms)
+    │   └── ventilation_safety.h          # Header for safety functions
+    ├── ui/                                # User interface modules
+    │   ├── ventilation_lcd.c             # LCD interface code
+    │   └── ventilation_lcd.h             # LCD interface header
+    └── v3_old/                            # Previous versions / prototypes
+        ├── Air_flow_sensors_V1/          # Air flow sensor firmware
+        │   ├── Air_Flow_Sensors_V1.cpp
+        │   ├── Air_Flow_Sensors_V1.h
+        │   └── Air_flow_sensors_V1.ino
+        ├── mqtt_ventilation_machine_V1/  # MQTT-enabled prototype
+        │   ├── ESP8266_MQTT_Client_V1.cpp
+        │   ├── ESP8266_MQTT_Client_V1.h
+        │   └── ESP8266_MQTT_Client_V1.ino
+        ├── ventilation_control_pad_V2/   # Control pad prototype V2
+        │   ├── ventilation_control_pad_V2.cpp
+        │   ├── ventilation_control_pad_V2.h
+        │   └── ventilation_control_pad_V2.ino
+        ├── ventilation_idle_stepper_control/  # Old idle stepper control
+        │   ├── ventilation_idle_stepper_control.cpp
+        │   ├── ventilation_idle_stepper_control.h
+        │   └── ventilation_idle_stepper_control.ino
+        ├── ventilation_lcd_V3/            # Old LCD V3 code
+        │   ├── ventilation_lcd_V3.cpp
+        │   ├── ventilation_lcd_V3.h
+        │   └── ventilation_lcd_V3.ino
+        └── ventilation_machine_calculations/  # Old calculation modules
+            ├── ventilation_machine_calculations.cpp
+            ├── ventilation_machine_calculations.h
+            └── ventilation_machine_calculations.ino
+                          # Main project readme
 ```
 
 ## 🛠 System Components
