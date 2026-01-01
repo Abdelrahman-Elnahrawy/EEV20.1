@@ -1,9 +1,4 @@
-# EEV20.1 – Emergency Electronic Ventilator
 
-![Status](https://img.shields.io/badge/Status-Prototype-orange)
-![MCU](https://img.shields.io/badge/MCU-ATmega128A-blue)
-![3D](https://img.shields.io/badge/3D-Interactive-success)
-![License](https://img.shields.io/badge/License-MIT-green)
 # EEV20.1 – Emergency Electronic Ventilator
 
 <p align="center">
@@ -15,6 +10,8 @@
   <img src="https://img.shields.io/badge/MCU-ATmega128A-blue"/>
   <img src="https://img.shields.io/badge/Focus-Embedded%20%26%20Mechatronics-success"/>
   <img src="https://img.shields.io/badge/License-MIT-green"/>
+  <img src="/Product_vision.gif" alt="EEV20.1 3D Model" width="600"/>
+</p>
 </p>
 
 ---
