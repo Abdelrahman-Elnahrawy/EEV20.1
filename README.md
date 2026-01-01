@@ -1,81 +1,116 @@
-# EEV20.1 - Emergency Electronic Ventilator
-**Developed for i-Hub | COVID-19 Emergency Response**
+# EEV20.1 – Emergency Electronic Ventilator
 
-[![Hardware](https://img.shields.io/badge/MCU-ATmega128A-blue.svg)](https://www.microchip.com/en-us/product/ATmega128A)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![3D Model](https://img.shields.io/badge/3D%20View-GLB-orange)](path/to/your/model.glb)
-
-The **EEV20.1** is an open-source mechanical ventilator designed to assist in the global shortage of respiratory support devices during the COVID-19 pandemic. This system utilizes a stepper-motor-driven mechanism controlled by an **ATmega128A** to deliver precise tidal volumes and respiratory rates.
+![Status](https://img.shields.io/badge/Status-Prototype-orange)
+![MCU](https://img.shields.io/badge/MCU-ATmega128A-blue)
+![3D](https://img.shields.io/badge/3D-Interactive-success)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 📐 Interactive 3D Model
-<div align="center">
-  <h3>Mechanical Explosion View (Assembly Sequence)</h3>
-  <video src="product_vision.mp4" width="100%" muted autoplay loop playsinline>
-    Your browser does not support the video tag.
-  </video>
-  <p align="right">
-    <i>Click the video for playback controls or <a href="./Product_vision.glb">view the 3D model here</a>.</i>
-  </p>
-</div>
-## 📂 Firmware Architecture
+## 🧊 Interactive 3D Model (Main Feature)
 
-The firmware is designed for safety and modularity using a Finite State Machine (FSM) architecture.
+👉 **View the full EEV20.1 ventilator in 3D (Rotate / Zoom / Pan):**  
+🔗 **https://abdelrahman-elnahrawy.github.io/EEV20.1/**
 
-```text
-Ventilation_Firmware_ATmega128A/
-├── app/          # Finite State Machine (Ventilation Modes)
-├── control/      # Motor Speed/Position Profiles (Stepper Logic)
-├── logic/        # Respiratory Calculations (Tidal Vol, I:E, BPM)
-├── safety/       # Critical Alarms & Failsafes
-├── ui/           # LCD Menu System
-└── drivers/      # Hardware Abstraction (Timer1, ADC, GPIO)
-```
+> The 3D model represents the mechanical design and overall system layout of the ventilator.  
+> Best viewed on desktop or modern mobile browsers.
 
-🔌 Hardware Specifications
-```text
-MCU: Microchip ATmega128A (8-bit AVR)
+---
 
-Actuation: High-torque NEMA Stepper Motor
+## 📌 Project Overview
 
-Driver: Industrial Stepper Driver (DIR/PUL Interface)
+**EEV20.1** is an **Emergency Electronic Ventilator** developed as an open-source engineering project.  
+The goal is to demonstrate a complete ventilator system including **mechanical design**, **electronics**, and **embedded control firmware**.
 
-Sensors: Flow & Pressure Differential Sensors
+This repository focuses on:
+- System architecture
+- Mechanical enclosure & mechanism
+- Embedded firmware structure
+- Documentation & design files
 
-User Interface: 20x4 Character LCD + Rotary Encoder
-```
-🚀 Build & Flash
-Prerequisites
-```text
-Microchip Studio (formerly Atmel Studio) or PlatformIO.
+> ⚠️ This project is intended for **educational and research purposes only**.
 
-AVR-GCC Toolchain.
-```
-Compilation
-Clone the repository:
+---
 
-```Bash
+## 🧠 System Architecture
 
-git clone [https://github.com/Abdelrahman-Elnahrawy/EEV20.1.git](https://github.com/Abdelrahman-Elnahrawy/EEV20.1.git)
-```
-Open the solution file.
+The ventilator system consists of:
 
-Build for Release to enable compiler optimizations.
+- Mechanical compression system
+- Motor-driven actuation
+- Embedded controller (ATmega128A)
+- Sensors for monitoring
+- User interface & safety logic
 
-Flash via ISP (USBasp or AVRISP mkII).
+The **3D model** provides a clear visualization of how these subsystems integrate.
 
-⚠️ Medical Disclaimer
-This device is an emergency prototype. It is intended for research and educational purposes in the context of critical supply shortages. It has not been certified by any organization for clinical use on human patients without further validation.
+---
 
-🤝 Contributors
-Abdelrahman Elnahrawy 
+## 📁 Repository Structure
 
-### 🛑 Critical Step: Fix the Link
-In the code above, look for this line:
+EEV20.1/
+├── docs/ # GitHub Pages (3D Viewer)
+│ ├── index.html
+│ ├── Product_vision.glb
+│ └── Prototype.glb
+│
+├── Firmware/ # Embedded firmware
+├── Hardware/ # Schematics & PCB files
+├── Documentation/ # Manuals & reports
+└── README.md
 
-`[![Click to Interact](...)] (./path/to/your/model.glb)`
+yaml
+Copy code
 
-You **must** change `./path/to/your/model.glb` to the actual location of your file.
-* **Example:** If your file is named `ventilator.glb` and is in the main folder, change it to `./ventilator.glb`.
-* **Example:** If it is inside a folder named `cad`, change it to `./cad/ventilator.glb`.
+---
+
+## 🧊 3D Models
+
+| Model | Description |
+|-----|-------------|
+| `Product_vision.glb` | Final product visualization |
+| `Prototype.glb` | Early mechanical prototype |
+
+All models are viewable online via GitHub Pages.
+
+---
+
+## 🛠 Technologies Used
+
+- Embedded C
+- AVR Microcontroller (ATmega128A)
+- Mechanical CAD → GLB export
+- GitHub Pages (3D visualization)
+
+---
+
+## 🩺 Medical Disclaimer
+
+This project **is NOT a certified medical device**.
+
+- No FDA / CE approval  
+- Not validated for clinical use  
+- Do **NOT** use on patients  
+
+This work is strictly for:
+- Education
+- Research
+- Engineering demonstration
+
+---
+
+## 👤 Author
+
+**Abdelrahman Elnahrawy**  
+Embedded Systems & Mechatronics Engineer  
+
+GitHub: https://github.com/Abdelrahman-Elnahrawy
+
+---
+
+## 📜 License
+
+MIT License
+
+Copyright (c) 2025  
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files...
