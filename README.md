@@ -10,7 +10,6 @@
   <img src="https://img.shields.io/badge/MCU-ATmega128A-blue"/>
   <img src="https://img.shields.io/badge/Focus-Embedded%20%26%20Mechatronics-success"/>
   <img src="https://img.shields.io/badge/License-MIT-green"/>
-  <img src="/Product_vision.gif" alt="EEV20.1 3D Model" width="600"/>
 </p>
 </p>
 
@@ -38,39 +37,45 @@ The goal of this project is to demonstrate a **complete ventilator system design
 The following GIF shows the **actual 3D model** included in this repository:
 
 <p align="center">
-  <img src="docs/eev20_1_model.gif" alt="EEV20.1 Model Animation"/>
+  <img src="/Product_vision.gif" alt="EEV20.1 3D Model" width="600"/>
 </p>
 
 The original 3D assets are available in **GLB format** inside the `docs/` directory.
 
 ---
+🖼️ Circuit Diagram
+<p align="center"><img src="Pneumatic_circuit.jpg" alt="EEV20.1 Pneumatic Circuit" width="700"/>
 
-## 📂 Repository Structure
+*Figure 2: Pneumatic schematic showing flow paths and control valves.*
 
-EEV20.1/
-│
-├── docs/ # 3D models & visualization
-│ ├── eev20_1_model.gif
-│ ├── Product_vision.glb
-│ └── Prototype.glb
-│
-├── Ventilation_Firmware_ATmega128A/ # Embedded firmware (AVR)
-│ └── README.md # Firmware-specific documentation
-│
-├── Hardware/ # Hardware & PCB designs
-│
-├── Documentation/ # Reports, manuals & references
-│
-├── PCBs_Schematics.pdf
-├── Pneumatic_circuit.jpg
-├── EEV 20 ventilator User manual.pdf
-│
-└── README.md # This file
+### 🔍 Operational Principle / فكرة العمل
 
-yaml
-Copy code
+* **Mixing Phase (مرحلة الخلط):** Controlled by stepper motors, the Air and $O_2$ valves open to a specific ratio to achieve the target $FiO_2$.
+* **Delivery Phase (مرحلة الضخ):** The mixture is pressurized and delivered to the patient through a regulated flow path.
+* **Exhalation (الزفير):** The system manages the exhalation valve to maintain **PEEP** (Positive End-Expiratory Pressure) if required.
 
 ---
+
+## 📂 Repository Structure / هيكل المشروع
+
+```text
+EEV20.1/
+├── docs/                                # 3D model assets and viewer files
+│   ├── Product_vision.glb
+│   ├── Prototype.glb
+│   └── eev20_1_model.gif
+├── Ventilation_Firmware_ATmega128A/     # Embedded firmware for ATmega128A
+│   ├── <firmware source files…>
+│   └── README.md                        # Firmware‑specific readme
+├── Hardware/                            # Hardware design files
+│   ├── <schematics / PCB files…>
+├── Documentation/                       # Manuals & project reports
+│   ├── <PDF / docs…>
+├── PCBs_Schematics.pdf                  # Board schematics PDF
+├── Pneumatic_circuit.jpg                # Pneumatic design image
+├── EEV 20 ventilator User manual.pdf     # Main user manual
+└── README.md                            # Main project readme
+```
 
 ## 🛠 System Components
 
