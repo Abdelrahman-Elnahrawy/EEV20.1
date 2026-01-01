@@ -10,7 +10,8 @@
 ## 🧊 Interactive 3D Model (Main Feature)
 
 👉 **View the full EEV20.1 ventilator in 3D (Rotate / Zoom / Pan):**  
-🔗 **https://abdelrahman-elnahrawy.github.io/EEV20.1/**
+🔗 **[https://abdelrahman-elnahrawy.github.io/EEV20.1/](https://abdelrahman-elnahrawy.github.io/EEV20.1/index.html)
+**
 
 > The 3D model represents the mechanical design and overall system layout of the ventilator.  
 > Best viewed on desktop or modern mobile browsers.
