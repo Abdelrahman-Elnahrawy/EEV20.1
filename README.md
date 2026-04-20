@@ -170,11 +170,6 @@ All documents are available directly in the repository as PDFs or inside the `Do
 
 ---
 
-## 💻 Firmware
-
-The firmware source code is located in:
-
-Ventilation_Firmware_ATmega128A/
 
 yaml
 Copy code
